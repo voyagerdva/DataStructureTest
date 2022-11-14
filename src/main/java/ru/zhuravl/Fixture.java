@@ -1,4 +1,4 @@
-package ru.zhuavl;
+package ru.zhuravl;
 
 public class Fixture {
 }
