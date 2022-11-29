@@ -1,7 +1,8 @@
 package ru.zhuravl;
 
 public class Fixture {
-    void printFix() {
-        System.out.println("PRINT_FIX");
-    }
+    String Item_SSS0 = "SSS0";
+    String[] arr = {};
+    String[] arrEthalon = {"SSS0"};
+
 }

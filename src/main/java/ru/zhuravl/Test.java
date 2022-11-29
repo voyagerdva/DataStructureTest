@@ -1,24 +1,16 @@
 package ru.zhuravl;
 
 public class Test {
-    List list = new List();
-    LinkedList linkedList = new LinkedList();
-    Queue queue = new Queue();
+    public static void main(String[] args) {
+//      TEST 1. Single add()
+        List listLib = new List();
+        StructList structList = new StructList();
+        Fixture fixt = new Fixture();
 
-    Fixture fixt = new Fixture();
+        String[] arr = fixt.arr;
 
-    void printList() {
-        System.out.println("--------------");
-        System.out.println("from List: " + list.createNewList((byte) 15));;
-        System.out.println("--------------");
+        structList.add(arr, fixt.Item_SSS0);
     }
 
-    void printLinkedList() {
-        linkedList.createNewLinkedList();
-    }
-
-    void printQueue() {
-        queue.printQueue();
-    }
 
 }

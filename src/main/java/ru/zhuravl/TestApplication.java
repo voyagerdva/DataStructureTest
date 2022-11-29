@@ -1,20 +1,17 @@
 package ru.zhuravl;
 
-import ru.zhuravl.List;
-import ru.zhuravl.LinkedList;
-
 public class TestApplication {
     public static void main(String[] args) {
         Test test = new Test();
         Fixture fixture = new Fixture();
 
-        fixture.printFix();
+        StructList structList = new StructList();
 
-        test.printList();
-        test.printLinkedList();
-        test.printQueue();
+        String item = "SSS0";
+
+//        structList.add(item);
+        structList.show();
 
         System.out.println("DONE!!!");
-        
     }
 }
