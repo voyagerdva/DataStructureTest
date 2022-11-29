@@ -10,7 +10,7 @@ public class Test {
         Fixture fixt = new Fixture();
 
         String[] arr = fixt.arr;
-        list.add(arr, fixt.Item_SSS0);
+        list.add(fixt.Item_SSS0);
 
         System.out.println(Arrays.toString(arr));
 
