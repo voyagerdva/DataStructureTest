@@ -3,14 +3,13 @@ package ru.zhuravl;
 import java.util.Arrays;
 
 public class Test {
-    public static void main(String[] args) {
-//      TEST 1. Single add()
-        List listLib = new List();
-        StructList structList = new StructList();
-        Fixture fixt = new Fixture();
+    List listLib = new List();
+    StructList structList = new StructList();
 
-        String[] arr = fixt.arr;
+    Fixture fixt = new Fixture();
+    String[] arr = fixt.arr;
 
+    public void test_1_single_add() {
         structList.add(arr, fixt.Item_SSS0);
         System.out.println(Arrays.toString(arr));
 
