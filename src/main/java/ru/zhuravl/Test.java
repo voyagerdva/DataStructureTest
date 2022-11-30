@@ -7,17 +7,18 @@ public class Test {
 
     public void test_1_single_add() {
         InterfaceList list = new List();
-        Fixture fixt = new Fixture();
-
-        String[] arr = fixt.arr;
-        list.add(fixt.Item_SSS0);
-
-        System.out.println(Arrays.toString(arr));
-
-//        if (Arrays.equals(arr, fixt.arrEthalon)) System.out.println("Тест пройден!");
-//        else System.out.println("Тест НЕ пройден! :-((( ");
-        assert (Arrays.equals(arr, fixt.arrEthalon));
-        System.out.println(Arrays.toString(arr));
+        list.addFirst();
+//        Fixture fixt = new Fixture();
+//
+//        String[] arr = fixt.arr;
+//        list.add(fixt.Item_SSS0);
+//
+//        System.out.println(Arrays.toString(arr));
+//
+////        if (Arrays.equals(arr, fixt.arrEthalon)) System.out.println("Тест пройден!");
+////        else System.out.println("Тест НЕ пройден! :-((( ");
+//        assert (Arrays.equals(arr, fixt.arrEthalon));
+//        System.out.println(Arrays.toString(arr));
 
     }
 
