@@ -6,36 +6,18 @@ import ru.zhuravl.InterfaceList;
 public class Test {
 
     public void test_1_single_add() {
-        InterfaceList list = new LinkList();
+        System.out.println("\n---------------------------------------------------------");
 
-        list.add("1111");
-        System.out.println("ADDED SECOND NODE - 1111");
-        System.out.printf("1111 - list.tail: %40s \n", ((LinkList) list).tail);
-        System.out.printf("1111 - list.currentNode value: %20s \n", ((LinkList) list).currentNode.value);
-        System.out.printf("1111 - list.currentNode: %20s \n", ((LinkList) list).currentNode);
-        System.out.printf("1111 - list.currentNode position: %20s \n", ((LinkList) list).currentNode.position);
-        System.out.printf("1111 - list.currentNode previous: %20s \n", ((LinkList) list).currentNode.previous);
-        System.out.println();
-
-        list.add("2222");
-        System.out.println("ADDED SECOND NODE - 2222");
-        System.out.printf("2222 - list.tail: %40s \n", ((LinkList) list).tail);
-        System.out.printf("2222 - list.currentNode value: %20s \n", ((LinkList) list).currentNode.value);
-        System.out.printf("2222 - list.currentNode: %20s \n", ((LinkList) list).currentNode);
-        System.out.printf("2222 - list.currentNode previous: %20s \n", ((LinkList) list).currentNode.previous);
-        System.out.printf("2222 - list.currentNode position: %20s \n", ((LinkList) list).currentNode.position);
-        System.out.println();
-
-        list.add("3333");
-        System.out.println("ADDED SECOND NODE - 3333");
-        System.out.printf("3333 - list.tail: %40s \n", ((LinkList) list).tail);
-        System.out.printf("3333 - list.currentNode value: %20s \n", ((LinkList) list).currentNode.value);
-        System.out.printf("3333 - list.currentNode: %20s \n", ((LinkList) list).currentNode);
-        System.out.printf("3333 - list.currentNode position: %20s \n", ((LinkList) list).currentNode.position);
-        System.out.printf("3333 - list.currentNode previous: %20s \n", ((LinkList) list).currentNode.previous);
+        LinkList linkList = new LinkList();
 
 
+        String data[] = {"11", "22", "33", "44", "55", "66"};
 
+        for (String item: data) {
+            linkList.add(item);
+        }
+
+        linkList.printList();
 
 
 //        Fixture fixt = new Fixture();
@@ -47,5 +29,11 @@ public class Test {
 
     }
 
+    public void addNodeAndPrint(LinkList linkList, String data){
+        System.out.printf("%-40s %-50s\n", data + " - linkList.tail:", ((LinkList) linkList).tail);
+        System.out.printf("%-40s %-50s\n", data + " - linkList.head:", ((LinkList) linkList).head);
+        System.out.printf("%-40s %-50s\n", data + " - linkList.head.value:", ((LinkList) linkList).head.value);
+        System.out.println("-----");
+    }
 
 }
