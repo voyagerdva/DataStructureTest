@@ -1,8 +1,15 @@
 package ru.zhuravl;
 
 public class TestApplication {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws AssertionError{
+        CheckFunctional checkFunctional = new CheckFunctional();
         Test test = new Test();
-        test.test_1_single_add();
+
+//        checkFunctional.checkAllMethods();
+        System.out.printf("\n======= Testing: ==================\n");
+        test.test_1_add();
+        test.test_2_remove();
+        test.test_3_size();
+
     }
 }

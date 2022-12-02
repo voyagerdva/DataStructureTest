@@ -1,65 +1,46 @@
 package ru.zhuravl;
 
 import java.util.Arrays;
-import ru.zhuravl.InterfaceList;
 
 public class Test {
-    public void test_1_single_add() {
-        System.out.println("\n---------------------------------------------------------");
+    public void test_1_add() {
+        Fixture fixture = new Fixture();
+        LinkList linkList = new LinkList();
+        String data = "WORD";
 
+        linkList.add(data);
+
+        String value = linkList.getNode(0);
+        String result = (value == fixture.test1_valueEthalon ? "+" : "-");
+        System.out.printf("%-6s %-10s %-1s", "Test 1", "ADD", result);
+        System.out.println();
+    }
+
+    public void test_2_remove() {
+        Fixture fixture = new Fixture();
         LinkList linkList = new LinkList();
 
+        for (String item : fixture.test2_data) linkList.add(item);
 
-        String data[] = {"11", "22", "33", "44", "55", "66", "77", "88"};
+        linkList.removeHead();
+        linkList.removeHead();
 
-        for (String item: data) {
-            linkList.add(item);
-            addNodeAndPrint(linkList, item);
-        }
-        linkList.size();
-        linkList.printList();
-        linkList.size();
-        linkList.removeHead();
-        linkList.size();
-        linkList.removeHead();
-        linkList.size();
-        linkList.removeHead();
-        linkList.size();
-        linkList.get(2);
-        linkList.get(0);
-        linkList.get(6);
-        linkList.get(8);
-        linkList.get(16);
-        linkList.get(5);
-        linkList.get(4);
-
+        String[] list = linkList.getList();
+        String result = (Arrays.equals(list, fixture.test2_listEthalon) ? "+" : "-");
+        System.out.printf("%-6s %-10s %-1s", "Test 2", "REMOVE", result);
+        System.out.println();
     }
 
+    public void test_3_size() {
+        Fixture fixture = new Fixture();
+        LinkList linkList = new LinkList();
 
-    public static void addNodeAndPrint(LinkList linkList, String data){
-        System.out.printf("%-25s %-35s\n", data + " - linkList.tail:", ((LinkList) linkList).tail);
-        System.out.printf("%-25s %-35s\n", data + " - linkList.tail.next:", ((LinkList) linkList).tail.next);
-        System.out.printf("%-25s %-35s\n", data + " - linkList.head:", ((LinkList) linkList).head);
-        System.out.printf("%-25s %-35s\n", data + " - linkList.head.value:", ((LinkList) linkList).head.value);
-        System.out.println("-----");
+        for (int i = 0; i < fixture.test3_qty; i++) {
+            String data = "0x"+(Integer.toString(i,16)).toUpperCase();
+            linkList.add(data);
+        }
+
+        String result = (linkList.size == fixture.test3_qty ? "+" : "-");
+        System.out.printf("%-6s %-10s %-1s", "Test 3", "SIZE", result);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-//        Fixture fixt = new Fixture();
-//
-//        if (Arrays.equals(arr, fixt.arrEthalon)) System.out.println("Тест пройден!");
-//        else System.out.println("Тест НЕ пройден! :-((( ");
-//        assert (Arrays.equals(arr, fixt.arrEthalon));
-//        System.out.println(Arrays.toString(arr));
