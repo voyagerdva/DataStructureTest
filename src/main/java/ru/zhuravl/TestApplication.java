@@ -1,20 +1,15 @@
 package ru.zhuravl;
 
-import ru.zhuravl.List;
-import ru.zhuravl.LinkedList;
-
 public class TestApplication {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws AssertionError{
+        CheckFunctional checkFunctional = new CheckFunctional();
         Test test = new Test();
-        Fixture fixture = new Fixture();
 
-        fixture.printFix();
+//        checkFunctional.checkAllMethods();
+        System.out.printf("\n======= Testing: ==================\n");
+        test.test_1_add();
+        test.test_2_remove();
+        test.test_3_size();
 
-        test.printList();
-        test.printLinkedList();
-        test.printQueue();
-
-        System.out.println("DONE!!!");
-        
     }
 }
