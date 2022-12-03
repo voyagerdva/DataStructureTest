@@ -10,7 +10,7 @@ public class Test {
 
         linkList.add(data);
 
-        String value = linkList.getNode(0);
+        String value = linkList.getNodeValue(0);
         String result = (value == fixture.test1_valueEthalon ? "+" : "-");
         System.out.printf("%-6s %-10s %-1s", "Test 1", "ADD", result);
         System.out.println();

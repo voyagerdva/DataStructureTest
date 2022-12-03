@@ -5,11 +5,14 @@ public class TestApplication {
         CheckFunctional checkFunctional = new CheckFunctional();
         Test test = new Test();
 
-//        checkFunctional.checkAllMethods();
         System.out.printf("\n======= Testing: ==================\n");
         test.test_1_add();
         test.test_2_remove();
         test.test_3_size();
+
+        System.out.printf("\n======= Check functional: ==================\n");
+        checkFunctional.checkAllMethods();
+
 
     }
 }
