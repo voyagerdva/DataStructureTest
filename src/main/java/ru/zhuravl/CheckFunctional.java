@@ -15,17 +15,17 @@ public class CheckFunctional {
         String data3[] = {"44"};
 
         String data4[] = {"11", "22", "33", "44", "88", "55"};
-        String data5[] = {"44", "33", "cc", "11", "55", "88"};
+        String data5[] = {"22", "44", "88"};
 
         for (String item: data4) {
             linkList1.add(item);
-            addNodeAndPrint(linkList1, item);
+            addNodeAndPrint((LinkList) linkList1, item);
         }
         System.out.println(linkList1.getSize() + "\n======================\n");
 
         for (String item: data5) {
             linkList2.add(item);
-            addNodeAndPrint(linkList2, item);
+            addNodeAndPrint((LinkList) linkList2, item);
         }
         System.out.println(linkList2.getSize() + "\n======================\n");
 

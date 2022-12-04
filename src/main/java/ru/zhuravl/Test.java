@@ -24,7 +24,7 @@ public class Test {
         linkList.removeHead();
         linkList.removeHead();
 
-        String result = (Arrays.equals(linkList.getList(), fixture.test2_listEthalon) ? "+" : "-");
+        String result = (Arrays.equals(linkList.getListValues(), fixture.test2_listEthalon) ? "+" : "-");
         System.out.printf("%-6s %-10s %-1s\n", "Test 2", "REMOVE", result);
     }
 
@@ -51,7 +51,7 @@ public class Test {
 
         linkList1.addList(linkList2);
 
-        String result = (Arrays.equals(linkList1.getList(), fixture.test4_listEthalon) ? "+" : "-");
+        String result = (Arrays.equals(linkList1.getListValues(), fixture.test4_listEthalon) ? "+" : "-");
         System.out.printf("%-6s %-10s %-1s\n", "Test 4", "REMOVE", result);
         System.out.println();
 
