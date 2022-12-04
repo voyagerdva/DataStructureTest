@@ -12,8 +12,7 @@ public class Test {
 
         String value = linkList.getNodeValue(0);
         String result = (value == fixture.test1_valueEthalon ? "+" : "-");
-        System.out.printf("%-6s %-10s %-1s", "Test 1", "ADD", result);
-        System.out.println();
+        System.out.printf("%-6s %-10s %-1s\n", "Test 1", "ADD", result);
     }
 
     public void test_2_remove() {
@@ -25,10 +24,8 @@ public class Test {
         linkList.removeHead();
         linkList.removeHead();
 
-        String[] list = linkList.getList();
-        String result = (Arrays.equals(list, fixture.test2_listEthalon) ? "+" : "-");
-        System.out.printf("%-6s %-10s %-1s", "Test 2", "REMOVE", result);
-        System.out.println();
+        String result = (Arrays.equals(linkList.getList(), fixture.test2_listEthalon) ? "+" : "-");
+        System.out.printf("%-6s %-10s %-1s\n", "Test 2", "REMOVE", result);
     }
 
     public void test_3_size() {
@@ -40,7 +37,24 @@ public class Test {
             linkList.add(data);
         }
 
-        String result = (linkList.size == fixture.test3_qty ? "+" : "-");
-        System.out.printf("%-6s %-10s %-1s", "Test 3", "SIZE", result);
+        String result = (linkList.getSize() == fixture.test3_qty ? "+" : "-");
+        System.out.printf("%-6s %-10s %-1s\n", "Test 3", "SIZE", result);
+    }
+
+    public void test_4_addList() {
+        Fixture fixture = new Fixture();
+        LinkList linkList1 = new LinkList();
+        LinkList linkList2 = new LinkList();
+
+        for (String item : fixture.test4_data1) linkList1.add(item);
+        for (String item : fixture.test4_data2) linkList2.add(item);
+
+        linkList1.addList(linkList2);
+
+        String result = (Arrays.equals(linkList1.getList(), fixture.test4_listEthalon) ? "+" : "-");
+        System.out.printf("%-6s %-10s %-1s\n", "Test 4", "REMOVE", result);
+        System.out.println();
+
+
     }
 }

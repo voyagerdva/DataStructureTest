@@ -9,9 +9,11 @@ public class TestApplication {
         test.test_1_add();
         test.test_2_remove();
         test.test_3_size();
+        test.test_4_addList();
 
-        System.out.printf("\n======= Check functional: ==================\n");
-        checkFunctional.checkAllMethods();
+
+//        System.out.printf("\n======= Check functional: ==================\n");
+//        checkFunctional.checkAllMethods();
 
 
     }
