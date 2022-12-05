@@ -8,7 +8,7 @@ public class CheckFunctional {
         InterfaceList linkList1 = new LinkList();
         InterfaceList linkList2 = new LinkList();
 
-        String data1[] = {"11", "22", "33", "44", "55", "66"};
+        String data1[] = {"00", "11", "22", "33", "44", "55", "66"};
         String data2[] = {"22", "44", "77"};
 
         for (String item: data1) {
@@ -62,13 +62,38 @@ public class CheckFunctional {
 
         System.out.println("\n\n========== Check getNodeValue method(): ");
 
+
         System.out.println(((LinkList) linkList5).getNode(0).getValue());
+        System.out.println(linkList5.getElement(0));
         System.out.println(((LinkList) linkList5).getNode(1).getValue());
+        System.out.println(linkList5.getElement(1));
         System.out.println(((LinkList) linkList5).getNode(2).getValue());
+        System.out.println(linkList5.getElement(2));
         System.out.println(((LinkList) linkList5).getNode(3).getValue());
+        System.out.println(linkList5.getElement(3));
         System.out.println(((LinkList) linkList5).getNode(4).getValue());
+        System.out.println(linkList5.getElement(4));
+
+//=========================================================================================================
+        System.out.println("\n\n========== Check removeElement method(): ");
+
+        InterfaceList linkList6 = new LinkList();
+
+        for (String item: data1)
+            linkList6.add(item);
+        linkList6.printList();
+        System.out.println("\n" + linkList6.getSize() + "\n-----------------------\n");
+
+        linkList6.removeElement(4);
+        linkList6.printList();
+        System.out.println("\n" + linkList6.getSize() + "\n-----------------------\n");
+        System.out.println();
 
     }
+
+
+
+
 
 
 
@@ -88,3 +113,6 @@ public class CheckFunctional {
         System.out.println("-----");
     }
 }
+
+
+

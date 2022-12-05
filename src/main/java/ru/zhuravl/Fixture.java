@@ -14,6 +14,15 @@ public class Fixture {
     String test5_data2[] = {"44", "22", "11", "X", "XIII"};
     String test5_listEthalon[] = {"11", "22", "44", "X"};
 
+    String test6_data[] =        {"00", "11", "22", "33", "44", "55", "66"};
+    String test6_listEthalon[] = {"11", "22", "33", "44", "55", "66"};
+    int test6_sizeEthalon = 6;
+    String test7_listEthalon[] = {"00", "11", "22", "44", "55", "66"};
+    int test7_sizeEthalon = 6;
+    String test8_listEthalon[] = {"00", "11", "22", "33", "44", "55"};
+    int test8_sizeEthalon = 6;
+
+
 
 
 }
