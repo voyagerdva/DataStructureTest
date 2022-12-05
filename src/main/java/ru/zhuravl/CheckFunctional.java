@@ -8,8 +8,8 @@ public class CheckFunctional {
         InterfaceList linkList1 = new LinkList();
         InterfaceList linkList2 = new LinkList();
 
-        String data1[] = {"11", "22", "33", "44", "55", "66", "77", "88", "99", "X", "XI", "XII"};
-        String data2[] = {"44", "33", "22", "11", "X", "XIII"};
+        String data1[] = {"11", "22", "33", "44", "55", "66"};
+        String data2[] = {"44", "22", "X"};
 
         for (String item: data1) {
             linkList1.add(item);
@@ -38,12 +38,34 @@ public class CheckFunctional {
 
 //========================================================================================================
         System.out.println("\n\n========== Check intersect() method(): ");
+        InterfaceList linkList4 = new LinkList();
+        InterfaceList linkList5 = new LinkList();
 
-        InterfaceList linkList3 = linkList1.intersect((LinkList) linkList2);
+//        String data1[] = {"11", "22", "33", "44", "55", "66"};
+//        String data2[] = {"44", "22", "X"};
+
+        for (String item: data1) linkList4.add(item);
+        linkList4.printList();
+        System.out.println("________________________ " + linkList4.getSize());
+
+        for (String item: data2) linkList5.add(item);
+        linkList5.printList();
+        System.out.println("________________________ " + linkList5.getSize());
+
+        InterfaceList linkList3 = linkList4.intersect((LinkList) linkList5);
 
         System.out.printf("%s %s \n", "size linkList3: ", linkList3.getSize());
         System.out.println(Arrays.toString(linkList3.getListValues()));
         linkList3.printList();
+
+//=========================================================================================================
+
+        System.out.println("\n\n========== Check getNodeValue method(): ");
+
+        System.out.println(((LinkList) linkList5).getNodeValue(0));
+        System.out.println(((LinkList) linkList5).getNodeValue(1));
+        System.out.println(((LinkList) linkList5).getNodeValue(2));
+        System.out.println(((LinkList) linkList5).getNodeValue(3));
 
 
     }
