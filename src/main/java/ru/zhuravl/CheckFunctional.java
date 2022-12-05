@@ -9,7 +9,7 @@ public class CheckFunctional {
         InterfaceList linkList2 = new LinkList();
 
         String data1[] = {"11", "22", "33", "44", "55", "66"};
-        String data2[] = {"44", "22", "X"};
+        String data2[] = {"22", "44", "77"};
 
         for (String item: data1) {
             linkList1.add(item);
@@ -62,20 +62,29 @@ public class CheckFunctional {
 
         System.out.println("\n\n========== Check getNodeValue method(): ");
 
-        System.out.println(((LinkList) linkList5).getNodeValue(0));
-        System.out.println(((LinkList) linkList5).getNodeValue(1));
-        System.out.println(((LinkList) linkList5).getNodeValue(2));
-        System.out.println(((LinkList) linkList5).getNodeValue(3));
-
+        System.out.println(((LinkList) linkList5).getNode(0).getValue());
+        System.out.println(((LinkList) linkList5).getNode(1).getValue());
+        System.out.println(((LinkList) linkList5).getNode(2).getValue());
+        System.out.println(((LinkList) linkList5).getNode(3).getValue());
+        System.out.println(((LinkList) linkList5).getNode(4).getValue());
 
     }
 
 
-    public static void addNodeAndPrint(LinkList linkList, String data1){
-        System.out.printf("%-30s %-35s\n", data1 + " - linkList.tail:", ((LinkList) linkList).getTail());
-        System.out.printf("%-30s %-35s\n", data1 + " - linkList.tail.next:", ((LinkList) linkList).getTail().next);
-        System.out.printf("%-30s %-35s\n", data1 + " - linkList.head:", ((LinkList) linkList).getHead());
-        System.out.printf("%-30s %-35s\n", data1 + " - linkList.head.value:", ((LinkList) linkList).getHead().value);
+
+    public static void addNodeAndPrint(InterfaceList linkList, String data1){
+        System.out.printf("%-25s %-35s\n", data1 + " - linkList.tail:", ((LinkList) linkList).getTail());
+
+        LinkList ref1 = ((LinkList) linkList);
+        LinkList.Node ref2 = (LinkList.Node) ref1.getTail();
+        LinkList.Node ref3 = (LinkList.Node) ref2.next;
+        System.out.printf("%-25s %-35s\n", data1 + " - linkList.tail:", ref3);
+
+        System.out.printf("%-25s %-35s\n", data1 + " - linkList.head:", ((LinkList) linkList).getHead());
+
+        LinkList.Node ref4 = (LinkList.Node) ref1.getHead();
+        String ref5 = ref4.value;
+        System.out.printf("%-25s %-35s\n", data1 + " - linkList.head.value:", ref5);
         System.out.println("-----");
     }
 }
