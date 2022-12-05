@@ -10,7 +10,7 @@ public class Test {
 
         linkList.add(data);
 
-        String value = linkList.getNodeValue(0);
+        String value = ((LinkList) linkList).getNodeValue(0);
         String result = (value == fixture.test1_valueEthalon ? "+" : "-");
         System.out.printf("%-6s %-15s %-1s\n", "Test 1", "ADD", result);
     }
@@ -49,7 +49,7 @@ public class Test {
         for (String item : fixture.test4_data1) linkList1.add(item);
         for (String item : fixture.test4_data2) linkList2.add(item);
 
-        linkList1.addList(linkList2);
+        linkList1.addList((LinkList) linkList2);
 
         String result = (Arrays.equals(linkList1.getListValues(), fixture.test4_listEthalon) ? "+" : "-");
         System.out.printf("%-6s %-15s %-1s\n", "Test 4", "REMOVE", result);
@@ -63,7 +63,7 @@ public class Test {
         for (String item : fixture.test5_data1) linkList1.add(item);
         for (String item : fixture.test5_data2) linkList2.add(item);
 
-        InterfaceList linkList3= linkList1.intersect(linkList2);
+        InterfaceList linkList3= linkList1.intersect((LinkList) linkList2);
         String result = (Arrays.equals(linkList3.getListValues(), fixture.test5_listEthalon) ? "+" : "-");
 
         System.out.printf("%-6s %-15s %-1s\n", "Test 5", "INTERSECT", result);

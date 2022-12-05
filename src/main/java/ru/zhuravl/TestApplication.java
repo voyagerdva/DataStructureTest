@@ -12,8 +12,8 @@ public class TestApplication {
         test.test_4_addList();
         test.test_5_intersect();
 
-//        System.out.printf("\n======= Check functional: ==================\n");
-//        checkFunctional.checkAllMethods();
+        System.out.printf("\n======= Check functional: ==================\n");
+        checkFunctional.checkAllMethods();
 
 
     }

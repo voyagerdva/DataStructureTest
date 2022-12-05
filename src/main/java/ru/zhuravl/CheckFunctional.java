@@ -27,10 +27,10 @@ public class CheckFunctional {
         System.out.println("\n\n========== Check addList() method(): ");
 
 
-        linkList1.addList(linkList2);
+        linkList1.addList((LinkList) linkList2);
 
         for (int i = 0; i < linkList1.getSize(); i++) {
-            System.out.printf("%s \n", linkList1.getNode(i));
+            System.out.printf("%s \n", ((LinkList) linkList1).getNode(i));
         }
 
         System.out.println(Arrays.toString(linkList1.getListValues()));
@@ -39,9 +39,9 @@ public class CheckFunctional {
 //========================================================================================================
         System.out.println("\n\n========== Check intersect() method(): ");
 
-        InterfaceList linkList3 = linkList1.intersect(linkList2);
+        InterfaceList linkList3 = linkList1.intersect((LinkList) linkList2);
 
-        System.out.printf("%s %s ", "size linkList3: \n", linkList3.getSize());
+        System.out.printf("%s %s \n", "size linkList3: ", linkList3.getSize());
         System.out.println(Arrays.toString(linkList3.getListValues()));
         linkList3.printList();
 
@@ -50,10 +50,10 @@ public class CheckFunctional {
 
 
     public static void addNodeAndPrint(LinkList linkList, String data1){
-        System.out.printf("%-25s %-35s\n", data1 + " - linkList.tail:", ((LinkList) linkList).getTail());
-        System.out.printf("%-25s %-35s\n", data1 + " - linkList.tail.next:", ((LinkList) linkList).getTail().next);
-        System.out.printf("%-25s %-35s\n", data1 + " - linkList.head:", ((LinkList) linkList).getHead());
-        System.out.printf("%-25s %-35s\n", data1 + " - linkList.head.value:", ((LinkList) linkList).getHead().value);
+        System.out.printf("%-30s %-35s\n", data1 + " - linkList.tail:", ((LinkList) linkList).getTail());
+        System.out.printf("%-30s %-35s\n", data1 + " - linkList.tail.next:", ((LinkList) linkList).getTail().next);
+        System.out.printf("%-30s %-35s\n", data1 + " - linkList.head:", ((LinkList) linkList).getHead());
+        System.out.printf("%-30s %-35s\n", data1 + " - linkList.head.value:", ((LinkList) linkList).getHead().value);
         System.out.println("-----");
     }
 }
