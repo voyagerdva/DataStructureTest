@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class CheckFunctional {
     public void checkAllMethods() {
-        System.out.println("\n\n========== Check add() method(): ");
+        System.out.println("\n\n========== Check addFront() method(): ");
         InterfaceList linkList1 = new LinkList();
         InterfaceList linkList2 = new LinkList();
 
@@ -12,13 +12,13 @@ public class CheckFunctional {
         String data2[] = {"22", "44", "77"};
 
         for (String item: data1) {
-            linkList1.add(item);
+            linkList1.addFront(item);
             addNodeAndPrint((LinkList) linkList1, item);
         }
         System.out.println(linkList1.getSize() + "\n-----------------------\n");
 
         for (String item: data2) {
-            linkList2.add(item);
+            linkList2.addFront(item);
             addNodeAndPrint((LinkList) linkList2, item);
         }
         System.out.println(linkList2.getSize() + "\n-----------------------\n");
@@ -44,11 +44,11 @@ public class CheckFunctional {
 //        String data1[] = {"11", "22", "33", "44", "55", "66"};
 //        String data2[] = {"44", "22", "X"};
 
-        for (String item: data1) linkList4.add(item);
+        for (String item: data1) linkList4.addFront(item);
         linkList4.printList();
         System.out.println("________________________ " + linkList4.getSize());
 
-        for (String item: data2) linkList5.add(item);
+        for (String item: data2) linkList5.addFront(item);
         linkList5.printList();
         System.out.println("________________________ " + linkList5.getSize());
 
@@ -80,7 +80,7 @@ public class CheckFunctional {
         InterfaceList linkList6 = new LinkList();
 
         for (String item: data1)
-            linkList6.add(item);
+            linkList6.addFront(item);
         linkList6.printList();
         System.out.println("\n" + linkList6.getSize() + "\n-----------------------\n");
 
