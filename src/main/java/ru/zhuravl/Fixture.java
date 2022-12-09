@@ -10,9 +10,9 @@ public class Fixture {
     String test4_data2[] = {"55", "66", "77"};
     String test4_listEthalon[] = {"11", "22", "33", "44", "55", "66", "77"};
 
-    String test5_data1[] = {"11", "22", "33", "44", "55", "66", "77", "88", "99", "X", "XI", "XII"};
-    String test5_data2[] = {"44", "22", "11", "X", "XIII"};
-    String test5_listEthalon[] = {"11", "22", "44", "X"};
+    String intersect_data1[] = {"11", "22", "33", "44", "55", "66", "77", "88", "99", "X", "XI", "XII"};
+    String intersect_data2[] = {"44", "22", "11", "X", "XII"};
+    String intersect_listEthalon[] = {"11", "22", "44", "X", "XII"};
 
     String test6_data[] =        {"00", "11", "22", "33", "44", "55", "66"};
     String test6_listEthalon[] = {"11", "22", "33", "44", "55", "66"};
