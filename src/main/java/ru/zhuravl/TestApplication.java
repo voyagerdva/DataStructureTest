@@ -35,5 +35,16 @@ public class TestApplication {
         System.out.printf("%-2s ", 6); testLinkListA.test_removeElement_index_0();
         System.out.printf("%-2s ", 7); testLinkListA.test_removeElement_index_3();
         System.out.printf("%-2s ", 8); testLinkListA.test_removeElement_index_6();
+
+        TestDualLinkListA testDualLinkListA = new TestDualLinkListA();
+        System.out.printf("\n======= Testing LinkListA: ==================\n");
+        System.out.printf("%-2s ", 1); testDualLinkListA.test_DualA_add();
+        System.out.printf("%-2s ", 2); testDualLinkListA.test_DualA_size();
+        System.out.printf("%-2s ", 3); testDualLinkListA.test_DualA_addList();
+        System.out.printf("%-2s ", 4); testDualLinkListA.test_DualA_intersect();
+        System.out.printf("%-2s ", 5); testDualLinkListA.test_DualA_removeHead();
+        System.out.printf("%-2s ", 6); testDualLinkListA.test_DualA_removeElement_index_0();
+        System.out.printf("%-2s ", 7); testDualLinkListA.test_DualA_removeElement_index_3();
+        System.out.printf("%-2s ", 8); testDualLinkListA.test_DualA_removeElement_index_6();
     }
 }
