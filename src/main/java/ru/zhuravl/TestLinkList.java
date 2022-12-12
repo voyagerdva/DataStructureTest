@@ -19,12 +19,12 @@ public class TestLinkList {
         Fixture fixture = new Fixture();
         InterfaceList linkList = new LinkList();
 
-        for (int i = 0; i < fixture.test3_qty; i++) {
+        for (int i = 0; i < fixture.test_size_qty; i++) {
             String data = "0x"+(Integer.toString(i,16)).toUpperCase();
             linkList.add(data);
         }
 
-        String result = (linkList.getSize() == fixture.test3_qty ? "YES" : "no");
+        String result = (linkList.getSize() == fixture.test_size_qty ? "YES" : "no");
         System.out.printf("%-6s %-15s %-1s\n", "Test 2", "SIZE", result);
     }
 
@@ -33,12 +33,12 @@ public class TestLinkList {
         InterfaceList linkList1 = new LinkList();
         InterfaceList linkList2 = new LinkList();
 
-        for (String item : fixture.test4_data1) linkList1.add(item);
-        for (String item : fixture.test4_data2) linkList2.add(item);
+        for (String item : fixture.test_addList_data1) linkList1.add(item);
+        for (String item : fixture.test_addList_data2) linkList2.add(item);
 
         linkList1.addList((LinkList) linkList2);
 
-        String result = (Arrays.equals(linkList1.getListValues(), fixture.test4_listEthalon) ? "YES" : "no");
+        String result = (Arrays.equals(linkList1.getListValues(), fixture.test_addList_listEthalon) ? "YES" : "no");
         System.out.printf("%-6s %-15s %-1s\n", "Test 3", "ADD_LIST", result);
     }
 
@@ -60,12 +60,12 @@ public class TestLinkList {
         Fixture fixture = new Fixture();
         InterfaceList linkList = new LinkList();
 
-        for (String item : fixture.test2_data) linkList.add(item);
+        for (String item : fixture.test_removeHead_data) linkList.add(item);
 
         linkList.removeHead();
         linkList.removeHead();
 
-        String result = (Arrays.equals(linkList.getListValues(), fixture.test2_listEthalon) ? "YES" : "no");
+        String result = (Arrays.equals(linkList.getListValues(), fixture.test_removeHead_listEthalon) ? "YES" : "no");
         System.out.printf("%-6s %-15s %-1s\n", "Test 5", "REMOVE HEAD", result);
     }
 
@@ -73,11 +73,11 @@ public class TestLinkList {
         Fixture fixture = new Fixture();
         InterfaceList linkList = new LinkList();
 
-        for (String item : fixture.test6_data) linkList.add(item);
+        for (String item : fixture.test_removeElement_index_0_data) linkList.add(item);
 
         linkList.removeElement(0);
-        String result = (Arrays.equals(linkList.getListValues(), fixture.test6_listEthalon)
-                & (linkList.getSize() == fixture.test6_sizeEthalon) ? "YES" : "no");
+        String result = (Arrays.equals(linkList.getListValues(), fixture.test_removeElement_index_0_listEthalon)
+                & (linkList.getSize() == fixture.test_removeElement_index_0_sizeEthalon) ? "YES" : "no");
 
         System.out.printf("%-6s %-15s %-1s\n", "Test 6", "REMOVE_0", result);
 
@@ -86,11 +86,11 @@ public class TestLinkList {
         Fixture fixture = new Fixture();
         InterfaceList linkList = new LinkList();
 
-        for (String item : fixture.test6_data) linkList.add(item);
+        for (String item : fixture.test_removeElement_index_0_data) linkList.add(item);
 
         linkList.removeElement(3);
-        String result = (Arrays.equals(linkList.getListValues(), fixture.test7_listEthalon)
-                & (linkList.getSize() == fixture.test7_sizeEthalon) ? "YES" : "no");
+        String result = (Arrays.equals(linkList.getListValues(), fixture.test_removeElement_index_3_listEthalon)
+                & (linkList.getSize() == fixture.test_removeElement_index_3_sizeEthalon) ? "YES" : "no");
 
         System.out.printf("%-6s %-15s %-1s\n", "Test 7", "REMOVE_3", result);
 
@@ -99,11 +99,11 @@ public class TestLinkList {
         Fixture fixture = new Fixture();
         InterfaceList linkList = new LinkList();
 
-        for (String item : fixture.test6_data) linkList.add(item);
+        for (String item : fixture.test_removeElement_index_0_data) linkList.add(item);
 
         linkList.removeElement(6);
-        String result = (Arrays.equals(linkList.getListValues(), fixture.test8_listEthalon)
-                & (linkList.getSize() == fixture.test8_sizeEthalon) ? "YES" : "no");
+        String result = (Arrays.equals(linkList.getListValues(), fixture.test_removeElement_index_6_listEthalon)
+                & (linkList.getSize() == fixture.test_removeElement_index_6_sizeEthalon) ? "YES" : "no");
 
         System.out.printf("%-6s %-15s %-1s\n", "Test 8", "REMOVE_6", result);
 

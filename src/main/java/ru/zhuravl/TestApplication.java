@@ -14,15 +14,6 @@ public class TestApplication {
         testLinkList.test_7_removeElement_index_3();
         testLinkList.test_8_removeElement_index_6();
 
-//        System.out.printf("\n======= Check functional LinkList: ==================\n");
-//        CheckFunctionalList checkFunctionalList = new CheckFunctionalList();
-//
-//        checkFunctionalList.checkAllMethods();
-//
-//        System.out.printf("\n======= Check functional DualLinkList: ==================\n");
-//        CheckFunctionalDualList checkFunctionalDualList = new CheckFunctionalDualList();
-//        checkFunctionalDualList.checkAllMethods();
-
         TestDualLinkList testDualLinkList = new TestDualLinkList();
         System.out.printf("\n======= Testing DualLinkList: ==================\n");
         testDualLinkList.test_1_add();
@@ -34,7 +25,15 @@ public class TestApplication {
         testDualLinkList.test_7_removeElement_index_3();
         testDualLinkList.test_8_removeElement_index_6();
 
-
-
+        TestLinkListA testLinkListA = new TestLinkListA();
+        System.out.printf("\n======= Testing LinkListA: ==================\n");
+        System.out.printf("%-2s ", 1); testLinkListA.test_add();
+        System.out.printf("%-2s ", 2); testLinkListA.test_size();
+        System.out.printf("%-2s ", 3); testLinkListA.test_addList();
+        System.out.printf("%-2s ", 4); testLinkListA.test_intersect();
+        System.out.printf("%-2s ", 5); testLinkListA.test_removeHead();
+        System.out.printf("%-2s ", 6); testLinkListA.test_removeElement_index_0();
+        System.out.printf("%-2s ", 7); testLinkListA.test_removeElement_index_3();
+        System.out.printf("%-2s ", 8); testLinkListA.test_removeElement_index_6();
     }
 }

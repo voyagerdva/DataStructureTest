@@ -19,12 +19,12 @@ public class TestDualLinkList {
         Fixture fixture = new Fixture();
         InterfaceDualList dualLinkList = new DualLinkList();
 
-        for (int i = 0; i < fixture.test3_qty; i++) {
+        for (int i = 0; i < fixture.test_size_qty; i++) {
             String data = "0x"+(Integer.toString(i,16)).toUpperCase();
             dualLinkList.add(data);
         }
 
-        String result = (dualLinkList.getSize() == fixture.test3_qty ? "YES" : "no");
+        String result = (dualLinkList.getSize() == fixture.test_size_qty ? "YES" : "no");
         System.out.printf("%-6s %-15s %-1s\n", "Test 2", "SIZE", result);
     }
 
@@ -33,12 +33,12 @@ public class TestDualLinkList {
         InterfaceDualList dualLinkList1 = new DualLinkList();
         InterfaceDualList dualLinkList2 = new DualLinkList();
 
-        for (String item : fixture.test4_data1) dualLinkList1.add(item);
-        for (String item : fixture.test4_data2) dualLinkList2.add(item);
+        for (String item : fixture.test_addList_data1) dualLinkList1.add(item);
+        for (String item : fixture.test_addList_data2) dualLinkList2.add(item);
 
         dualLinkList1.addList((LinkList) dualLinkList2);
 
-        String result = (Arrays.equals(dualLinkList1.getListValues(), fixture.test4_listEthalon) ? "YES" : "no");
+        String result = (Arrays.equals(dualLinkList1.getListValues(), fixture.test_addList_listEthalon) ? "YES" : "no");
         System.out.printf("%-6s %-15s %-1s\n", "Test 3", "ADD_LIST", result);
     }
 
@@ -64,12 +64,12 @@ public class TestDualLinkList {
         Fixture fixture = new Fixture();
         InterfaceDualList dualLinkList = new DualLinkList();
 
-        for (String item : fixture.test2_data) dualLinkList.add(item);
+        for (String item : fixture.test_removeHead_data) dualLinkList.add(item);
 
         dualLinkList.removeHead();
         dualLinkList.removeHead();
 
-        String result = (Arrays.equals(dualLinkList.getListValues(), fixture.test2_listEthalon) ? "YES" : "no");
+        String result = (Arrays.equals(dualLinkList.getListValues(), fixture.test_removeHead_listEthalon) ? "YES" : "no");
         System.out.printf("%-6s %-15s %-1s\n", "Test 5", "REMOVE HEAD", result);
     }
 
@@ -77,11 +77,11 @@ public class TestDualLinkList {
         Fixture fixture = new Fixture();
         InterfaceDualList dualLinkList = new DualLinkList();
 
-        for (String item : fixture.test6_data) dualLinkList.add(item);
+        for (String item : fixture.test_removeElement_index_0_data) dualLinkList.add(item);
 
         dualLinkList.removeElement(0);
-        String result = (Arrays.equals(dualLinkList.getListValues(), fixture.test6_listEthalon)
-                & (dualLinkList.getSize() == fixture.test6_sizeEthalon) ? "YES" : "no");
+        String result = (Arrays.equals(dualLinkList.getListValues(), fixture.test_removeElement_index_0_listEthalon)
+                & (dualLinkList.getSize() == fixture.test_removeElement_index_0_sizeEthalon) ? "YES" : "no");
 
         System.out.printf("%-6s %-15s %-1s\n", "Test 6", "REMOVE_0", result);
 
@@ -90,11 +90,11 @@ public class TestDualLinkList {
         Fixture fixture = new Fixture();
         InterfaceDualList dualLinkList = new DualLinkList();
 
-        for (String item : fixture.test6_data) dualLinkList.add(item);
+        for (String item : fixture.test_removeElement_index_0_data) dualLinkList.add(item);
 
         dualLinkList.removeElement(3);
-        String result = (Arrays.equals(dualLinkList.getListValues(), fixture.test7_listEthalon)
-                & (dualLinkList.getSize() == fixture.test7_sizeEthalon) ? "YES" : "no");
+        String result = (Arrays.equals(dualLinkList.getListValues(), fixture.test_removeElement_index_3_listEthalon)
+                & (dualLinkList.getSize() == fixture.test_removeElement_index_3_sizeEthalon) ? "YES" : "no");
 
         System.out.printf("%-6s %-15s %-1s\n", "Test 7", "REMOVE_3", result);
 
@@ -103,11 +103,11 @@ public class TestDualLinkList {
         Fixture fixture = new Fixture();
         InterfaceDualList dualLinkList = new DualLinkList();
 
-        for (String item : fixture.test6_data) dualLinkList.add(item);
+        for (String item : fixture.test_removeElement_index_0_data) dualLinkList.add(item);
 
         dualLinkList.removeElement(6);
-        String result = (Arrays.equals(dualLinkList.getListValues(), fixture.test8_listEthalon)
-                & (dualLinkList.getSize() == fixture.test8_sizeEthalon) ? "YES" : "no");
+        String result = (Arrays.equals(dualLinkList.getListValues(), fixture.test_removeElement_index_6_listEthalon)
+                & (dualLinkList.getSize() == fixture.test_removeElement_index_6_sizeEthalon) ? "YES" : "no");
 
         System.out.printf("%-6s %-15s %-1s\n", "Test 8", "REMOVE_6", result);
 
